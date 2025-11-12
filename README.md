@@ -133,7 +133,7 @@ Project completed as part of Unsupervised Learning coursework
 ## 🔗 [View Project on GitHub Pages](https://jmalfaro2019.github.io/image_compressing-ml/)
 
 📄  Full Report
-📋  [Download PDF Report](docs/TP_finished_rapport.pdf)
+📋  [Download PDF Report](docs/temperature_analysis_europe.pdf)
 
 👨‍💻 Author
 Jose Alfaro - [GitHub](https://github.com/jmalfaro2019) - [LinkedIn](https://www.linkedin.com/in/jose-alfaro-334327291)
