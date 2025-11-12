@@ -129,3 +129,14 @@ This PCA analysis successfully reduced 16-dimensional temperature data into 2 in
 The methodology can be extended to other geographical regions or additional climate variables for more comprehensive analysis.
 
 Project completed as part of Unsupervised Learning coursework
+
+## 🔗 [View Project on GitHub Pages](https://jmalfaro2019.github.io/image_compressing-ml/)
+
+📄  Full Report
+📋  [Download PDF Report](docs/TP_finished_rapport.pdf)
+
+👨‍💻 Author
+Jose Alfaro - [GitHub](https://github.com/jmalfaro2019) - [LinkedIn](https://www.linkedin.com/in/jose-alfaro-334327291)
+
+### ⭐ Did you like this project? Give the repository a star!
+
