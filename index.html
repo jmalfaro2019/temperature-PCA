@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>European Temperature Analysis with PCA | Your Portfolio</title>
+    <title>European Temperature Analysis with PCA | Jose Miguel Alfaro</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary: #2c3e50;
             --secondary: #3498db;
-            --accent: #e74c3c;
+            --accent: #27ae60;
             --light: #ecf0f1;
             --dark: #2c3e50;
-            --success: #2ecc71;
+            --warning: #e74c3c;
             --text: #333;
             --text-light: #7f8c8d;
         }
@@ -247,6 +247,10 @@
             background: #f8f9fa;
         }
         
+        .high-accuracy { background-color: rgba(39, 174, 96, 0.1); }
+        .medium-accuracy { background-color: rgba(241, 196, 15, 0.1); }
+        .low-accuracy { background-color: rgba(231, 76, 60, 0.1); }
+        
         /* Metrics */
         .metrics-grid {
             display: grid;
@@ -388,7 +392,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <h1>European Cities Temperature Analysis with PCA</h1>
+                <h1>European Temperature Analysis with PCA</h1>
                 <p class="subtitle">Climate classification of European cities using Principal Component Analysis</p>
                 <div class="btn-group">
                     <a href="https://github.com/jmalfaro2019" class="btn" target="_blank">
@@ -409,7 +413,7 @@
                 <h2>Project Summary</h2>
             </div>
             <div class="fade-in delay-1">
-                <p>This project applies <strong>Principal Component Analysis (PCA)</strong> to monthly temperature data from European cities to identify climate patterns based on geographical location. The analysis reveals how European cities cluster according to temperature characteristics and geographical factors, reducing 16 dimensions to just 2 principal components that capture 93.9% of the variance.</p>
+                <p>This project applies Principal Component Analysis (PCA) to monthly temperature data from European cities to identify climate patterns based on geographical location. The analysis reveals how European cities cluster according to temperature characteristics and geographical factors, reducing 16 dimensions to just 2 principal components that capture 93.9% of the variance.</p>
             </div>
             
             <div class="metrics-grid fade-in delay-2">
@@ -437,124 +441,96 @@
         </div>
     </section>
 
-    <!-- Skills -->
+    <!-- Dataset -->
     <section>
         <div class="container">
             <div class="section-title fade-in">
-                <h2>Skills & Technologies</h2>
+                <h2>Dataset Description</h2>
+            </div>
+            <div class="project-part fade-in">
+                <div class="part-header">
+                    <h3><i class="fas fa-database"></i> Temperature Dataset Characteristics</h3>
+                </div>
+                <div class="part-content">
+                    <p>The dataset contains monthly temperature data from multiple European cities, including 12 monthly temperature measurements plus additional geographical variables.</p>
+                    
+                    <div class="results-grid">
+                        <div class="result-card">
+                            <h4>Features</h4>
+                            <ul>
+                                <li><strong>Monthly Temperatures:</strong> January through December</li>
+                                <li><strong>Average Temperature:</strong> Annual mean temperature</li>
+                                <li><strong>Thermal Amplitude:</strong> Annual temperature range</li>
+                                <li><strong>Geographical Coordinates:</strong> Latitude and Longitude</li>
+                            </ul>
+                        </div>
+                        <div class="result-card">
+                            <h4>Data Characteristics</h4>
+                            <ul>
+                                <li><strong>Multiple European Cities:</strong> Various geographical locations</li>
+                                <li><strong>16 Total Variables:</strong> 12 months + average + amplitude + coordinates</li>
+                                <li><strong>Complete Records:</strong> No missing values</li>
+                                <li><strong>Standardized Data:</strong> Preprocessed for PCA analysis</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <p><strong>Key Insight:</strong> Strong correlations between monthly temperatures, with latitude emerging as the dominant factor influencing temperature patterns across Europe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Methodology -->
+    <section class="section-light">
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Methodology and Analysis</h2>
             </div>
             <div class="skills-grid">
                 <div class="skill-category fade-in">
-                    <h3><i class="fas fa-code"></i> Languages & Libraries</h3>
+                    <h3><i class="fas fa-search"></i> Exploratory Analysis</h3>
                     <ul>
-                        <li><i class="fas fa-check"></i> Python</li>
-                        <li><i class="fas fa-check"></i> NumPy & Pandas</li>
-                        <li><i class="fas fa-check"></i> scikit-learn</li>
-                        <li><i class="fas fa-check"></i> Matplotlib & Seaborn</li>
-                        <li><i class="fas fa-check"></i> Jupyter Notebook</li>
-                        <li><i class="fas fa-check"></i> Statistical Analysis</li>
+                        <li><i class="fas fa-check"></i> Correlation Matrix Analysis</li>
+                        <li><i class="fas fa-check"></i> Heatmap Visualization</li>
+                        <li><i class="fas fa-check"></i> Scatter Matrix Plots</li>
+                        <li><i class="fas fa-check"></i> Data Standardization</li>
                     </ul>
                 </div>
                 <div class="skill-category fade-in delay-1">
-                    <h3><i class="fas fa-cogs"></i> Technical Concepts</h3>
+                    <h3><i class="fas fa-brain"></i> PCA Implementation</h3>
                     <ul>
-                        <li><i class="fas fa-check"></i> Principal Component Analysis (PCA)</li>
-                        <li><i class="fas fa-check"></i> Dimensionality Reduction</li>
-                        <li><i class="fas fa-check"></i> Correlation Analysis</li>
-                        <li><i class="fas fa-check"></i> Component Selection (Kaiser, Elbow)</li>
-                        <li><i class="fas fa-check"></i> Multivariate Data Visualization</li>
-                        <li><i class="fas fa-check"></i> Component Interpretation</li>
+                        <li><i class="fas fa-check"></i> Principal Component Analysis</li>
+                        <li><i class="fas fa-check"></i> Component Selection Criteria</li>
+                        <li><i class="fas fa-check"></i> Kaiser Rule Application</li>
+                        <li><i class="fas fa-check"></i> Elbow Method Analysis</li>
+                        <li><i class="fas fa-check"></i> Variance Thresholds</li>
                     </ul>
                 </div>
                 <div class="skill-category fade-in delay-2">
-                    <h3><i class="fas fa-tasks"></i> Methodologies</h3>
+                    <h3><i class="fas fa-chart-bar"></i> Visualization</h3>
                     <ul>
-                        <li><i class="fas fa-check"></i> Data Preprocessing</li>
-                        <li><i class="fas fa-check"></i> Variable Standardization</li>
-                        <li><i class="fas fa-check"></i> Exploratory Data Analysis</li>
                         <li><i class="fas fa-check"></i> Observation Projection</li>
-                        <li><i class="fas fa-check"></i> Correlation Circle</li>
-                        <li><i class="fas fa-check"></i> Results Validation</li>
+                        <li><i class="fas fa-check"></i> Correlation Circles</li>
+                        <li><i class="fas fa-check"></i> Component Interpretation</li>
+                        <li><i class="fas fa-check"></i> Quality Measures (COS²)</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Part 1: Exploratory Analysis -->
-    <section class="section-light">
-        <div class="container">
-            <div class="project-part fade-in">
-                <div class="part-header">
-                    <h2><i class="fas fa-search"></i> Part 1: Exploratory Analysis & Correlations</h2>
-                </div>
-                <div class="part-content">
-                    <h3>Challenge</h3>
-                    <p>Understand the relationships between the 16 variables in the dataset (12 months + average + amplitude + latitude + longitude) before applying PCA.</p>
-                    
-                    <h3>Correlation Analysis</h3>
-                    <p>Initial analysis revealed important patterns:</p>
-                    <ul>
-                        <li><strong>High correlation between months</strong>: Months show correlations >0.95 with each other, especially adjacent months</li>
-                        <li><strong>Latitude as dominant factor</strong>: Strong negative correlation with all temperature variables</li>
-                        <li><strong>Thermal amplitude</strong>: Low correlation with most variables except specific months</li>
-                        <li><strong>Longitude</strong>: Minimal influence on annual average temperatures</li>
-                    </ul>
-                    
-                    <h3>Preprocessing</h3>
-                    <p>To prepare data for PCA:</p>
-                    <ul>
-                        <li>Removal of irrelevant "Region" column</li>
-                        <li>Standardization of all variables (centering and scaling)</li>
-                        <li>Separation of city names for subsequent analysis</li>
-                    </ul>
-                    
-                    <h3>Initial Insights</h3>
-                    <div class="results-grid">
-                        <div class="result-card">
-                            <h4>Seasonal Patterns</h4>
-                            <p>High correlations between months confirm consistent seasonal patterns. Winter months (January, February) show the lowest correlations with summer months (June, July), as expected.</p>
-                        </div>
-                        <div class="result-card">
-                            <h4>Geographical Determinants</h4>
-                            <p>Latitude emerges as the most influential factor, while longitude has minimal impact. This confirms that north-south position is much more determinant for climate than east-west position in Europe.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Part 2: PCA Application -->
+    <!-- Results -->
     <section>
         <div class="container">
+            <div class="section-title fade-in">
+                <h2>Results and Findings</h2>
+            </div>
             <div class="project-part fade-in">
                 <div class="part-header">
-                    <h2><i class="fas fa-project-diagram"></i> Part 2: PCA Application & Component Selection</h2>
+                    <h3><i class="fas fa-trophy"></i> PCA Results</h3>
                 </div>
                 <div class="part-content">
-                    <h3>Challenge</h3>
-                    <p>Determine the optimal number of principal components to retain for analysis, balancing explained variance and simplification.</p>
-                    
-                    <h3>Selection Criteria</h3>
-                    <p>Three criteria were applied to determine the number of components:</p>
-                    <ul>
-                        <li><strong>Kaiser Criterion</strong>: Retain components with eigenvalues > 1 (2 components)</li>
-                        <li><strong>Elbow Method</strong>: Graphical analysis of eigenvalue curve (3 components)</li>
-                        <li><strong>Cumulative Variance</strong>: Seek >90% explained variance (2 components: 93.9%)</li>
-                    </ul>
-                    
-                    <h3>Final Decision</h3>
-                    <p><strong>2 principal components</strong> were selected because:</p>
-                    <ul>
-                        <li>They explain 93.9% of total variance</li>
-                        <li>They comply with Kaiser criterion (eigenvalues > 1)</li>
-                        <li>They provide optimal simplification while maintaining essential information</li>
-                    </ul>
-                    
-                    <h3>Component Results</h3>
-                    
-                    <h4>Variance Explained by Component</h4>
                     <table>
                         <thead>
                             <tr>
@@ -562,38 +538,49 @@
                                 <th>Eigenvalue</th>
                                 <th>Variance Explained</th>
                                 <th>Cumulative Variance</th>
+                                <th>Interpretation</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>PC1</td>
+                            <tr class="high-accuracy">
+                                <td><strong>PC1</strong></td>
                                 <td>12.49</td>
                                 <td>78.0%</td>
                                 <td>78.0%</td>
+                                <td>North-South Temperature Gradient</td>
                             </tr>
-                            <tr>
-                                <td>PC2</td>
+                            <tr class="high-accuracy">
+                                <td><strong>PC2</strong></td>
                                 <td>2.54</td>
                                 <td>15.9%</td>
                                 <td>93.9%</td>
+                                <td>Continental vs Maritime Climate</td>
                             </tr>
-                            <tr>
-                                <td>PC3</td>
+                            <tr class="medium-accuracy">
+                                <td><strong>PC3</strong></td>
                                 <td>0.64</td>
                                 <td>4.0%</td>
                                 <td>97.9%</td>
+                                <td>Secondary Climate Patterns</td>
                             </tr>
                         </tbody>
                     </table>
                     
-                    <div class="results-grid">
+                    <div class="results-grid" style="margin-top: 2rem;">
                         <div class="result-card">
-                            <h4>PC1 Interpretation</h4>
-                            <p>The first component (78.0% variance) represents the <strong>north-south temperature gradient</strong>. It is strongly correlated with annual average temperature and all months, and shows a strong negative correlation with latitude.</p>
+                            <h4>Climate Classification</h4>
+                            <p>European cities naturally cluster into four distinct climate groups based on the two principal components:</p>
+                            <ul>
+                                <li><strong>Cold + Maritime:</strong> Northwestern cities (Dublin, London, Amsterdam)</li>
+                                <li><strong>Cold + Continental:</strong> Northeastern cities (Helsinki, Moscow, Stockholm)</li>
+                                <li><strong>Warm + Maritime:</strong> Southwestern cities (Lisbon, Barcelona, Bordeaux)</li>
+                                <li><strong>Warm + Continental:</strong> Southeastern cities (Athens, Rome, Madrid)</li>
+                            </ul>
                         </div>
                         <div class="result-card">
-                            <h4>PC2 Interpretation</h4>
-                            <p>The second component (15.9% variance) represents <strong>continentality vs. maritime influence</strong>. It is related to annual thermal amplitude and shows distinct patterns between continental and coastal cities.</p>
+                            <h4>Key Determinants</h4>
+                            <p>The analysis revealed that latitude is the dominant factor (78% of variance), while continentality explains an additional 16% of temperature variability.</p>
+                            <p>Longitude showed minimal influence on annual temperature patterns, confirming that north-south position is far more significant than east-west position in Europe.</p>
                         </div>
                     </div>
                 </div>
@@ -601,116 +588,96 @@
         </div>
     </section>
 
-    <!-- Part 3: Interpretation & Classification -->
+    <!-- Key Findings -->
     <section class="section-light">
         <div class="container">
-            <div class="project-part fade-in">
-                <div class="part-header">
-                    <h2><i class="fas fa-chart-bar"></i> Part 3: Interpretation & City Classification</h2>
+            <div class="section-title fade-in">
+                <h2>Key Findings</h2>
+            </div>
+            <div class="results-grid fade-in">
+                <div class="result-card">
+                    <h4><i class="fas fa-project-diagram"></i> Dual Climate Classification</h4>
+                    <p>European cities can be classified simultaneously using two main axes: north-south (average temperature) and continental-maritime (thermal amplitude), creating a comprehensive climate classification system.</p>
                 </div>
-                <div class="part-content">
-                    <h3>Challenge</h3>
-                    <p>Interpret the principal components and classify European cities according to their climate characteristics.</p>
-                    
-                    <h3>Observation Projection</h3>
-                    <p>Cities were projected onto the plane formed by the first two principal components:</p>
+                <div class="result-card">
+                    <h4><i class="fas fa-map-marked-alt"></i> Geographical Patterns</h4>
+                    <p>Clear geographical distributions emerged: Northwest (cold+maritime), Northeast (cold+continental), Southwest (warm+maritime), and Southeast (warm+continental), with few exceptions.</p>
+                </div>
+                <div class="result-card">
+                    <h4><i class="fas fa-check-circle"></i> Climate Theory Confirmation</h4>
+                    <p>The analysis confirmed established climate theories: oceanic influence softens temperatures, continentality extremizes temperatures, and latitude is the dominant factor in average temperatures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies -->
+    <section>
+        <div class="container">
+            <div class="section-title fade-in">
+                <h2>Technologies Used</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category fade-in">
+                    <h3><i class="fas fa-code"></i> Languages & Libraries</h3>
                     <ul>
-                        <li><strong>Positive PC1 extreme</strong>: Southern cities (Seville, Athens, Palermo) - warmer</li>
-                        <li><strong>Negative PC1 extreme</strong>: Northern cities (Reykjavik, St. Petersburg, Helsinki) - colder</li>
-                        <li><strong>Positive PC2 extreme</strong>: Continental cities (Kiev, Budapest) - higher thermal amplitude</li>
-                        <li><strong>Negative PC2 extreme</strong>: Maritime cities (Dublin, Reykjavik, Edinburgh) - lower amplitude</li>
+                        <li><i class="fab fa-python"></i> Python 3.8+</li>
+                        <li><i class="fas fa-cube"></i> scikit-learn</li>
+                        <li><i class="fas fa-chart-bar"></i> pandas & numpy</li>
+                        <li><i class="fas fa-paint-brush"></i> matplotlib & seaborn</li>
                     </ul>
-                    
-                    <h3>Climate Classification</h3>
-                    <p>Cities naturally clustered into four quadrants representing combinations of the two components:</p>
-                    
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Quadrant</th>
-                                <th>Climate Type</th>
-                                <th>Representative Examples</th>
-                                <th>Characteristics</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Q1 (PC1+, PC2+)</td>
-                                <td>Warm + Continental</td>
-                                <td>Athens, Budapest, Rome, Madrid</td>
-                                <td>High temperatures, large thermal amplitude</td>
-                            </tr>
-                            <tr>
-                                <td>Q2 (PC1-, PC2+)</td>
-                                <td>Cold + Continental</td>
-                                <td>Helsinki, Kiev, Moscow, Stockholm</td>
-                                <td>Low temperatures, large thermal amplitude</td>
-                            </tr>
-                            <tr>
-                                <td>Q3 (PC1-, PC2-)</td>
-                                <td>Cold + Maritime</td>
-                                <td>Amsterdam, Berlin, Dublin, London</td>
-                                <td>Low temperatures, low thermal amplitude</td>
-                            </tr>
-                            <tr>
-                                <td>Q4 (PC1+, PC2-)</td>
-                                <td>Warm + Maritime</td>
-                                <td>Lisbon, Paris, Barcelona, Bordeaux</td>
-                                <td>High temperatures, low thermal amplitude</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    
-                    <h3>Correlation Circle</h3>
-                    <p>Correlation circle analysis confirmed:</p>
+                </div>
+                <div class="skill-category fade-in delay-1">
+                    <h3><i class="fas fa-cogs"></i> Algorithms</h3>
                     <ul>
-                        <li><strong>Well-represented variables</strong>: Average temperature, individual months, latitude</li>
-                        <li><strong>Relationships between variables</strong>: Natural grouping of months by seasons</li>
-                        <li><strong>Contributions to components</strong>: Identification of which variables define each axis</li>
+                        <li><i class="fas fa-project-diagram"></i> Principal Component Analysis</li>
+                        <li><i class="fas fa-compress-arrows-alt"></i> Dimensionality Reduction</li>
+                        <li><i class="fas fa-chart-line"></i> Correlation Analysis</li>
+                        <li><i class="fas fa-ruler"></i> Standardization Techniques</li>
                     </ul>
-                    
-                    <div class="results-grid">
-                        <div class="result-card">
-                            <h4>Quality of Representation (COS²)</h4>
-                            <p>All cities showed COS² values > 0.9 on at least one axis, indicating excellent representation in the reduced space. Cities like Oslo, Stockholm, and Genoa achieved perfect values of 1.0 on one of the components.</p>
-                        </div>
-                        <div class="result-card">
-                            <h4>Interesting Exceptions</h4>
-                            <p>Budapest and Milan appeared as "Continental South" despite not being the most southern cities. Geneva was classified as "Continental North" due to its altitude and distance from the sea, confirming that altitude can modulate the effect of latitude.</p>
-                        </div>
-                    </div>
+                </div>
+                <div class="skill-category fade-in delay-2">
+                    <h3><i class="fas fa-tasks"></i> Techniques</h3>
+                    <ul>
+                        <li><i class="fas fa-crosshairs"></i> Component Selection Criteria</li>
+                        <li><i class="fas fa-compress-arrows-alt"></i> Variance Analysis</li>
+                        <li><i class="fas fa-search"></i> Exploratory Data Analysis</li>
+                        <li><i class="fas fa-chart-line"></i> Multivariate Visualization</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Conclusions -->
-    <section>
+    <section class="section-light">
         <div class="container">
             <div class="section-title fade-in">
-                <h2>General Conclusions</h2>
+                <h2>Conclusions</h2>
             </div>
-            <div class="results-grid fade-in">
-                <div class="result-card">
-                    <h4><i class="fas fa-globe-europe"></i> Dual Climate Classification</h4>
-                    <p>European cities can be classified simultaneously using two main axes: north-south (average temperature) and continental-maritime (thermal amplitude). This two-dimensional classification captures the essence of European climate patterns.</p>
-                </div>
-                <div class="result-card">
-                    <h4><i class="fas fa-map-marked-alt"></i> Clear Geographical Patterns</h4>
-                    <p>Four main climate groups were identified with coherent geographical distributions: Northwest (cold+maritime), Northeast (cold+continental), Southwest (warm+maritime), and Southeast (warm+continental).</p>
-                </div>
-                <div class="result-card">
-                    <h4><i class="fas fa-check-circle"></i> Confirmation of Climate Theories</h4>
-                    <p>The analysis confirms established climate theories: oceanic influence softens temperatures (low amplitude), continentality extremizes temperatures (high amplitude), and latitude is the dominant factor in average temperatures.</p>
-                </div>
-            </div>
-            
-            <div class="fade-in delay-1" style="text-align: center; margin-top: 3rem;">
-                <h3>Value of PCA Analysis</h3>
-                <p>PCA proved to be an extremely effective tool for reducing the complexity of multidimensional climate data, revealing underlying patterns that are not immediately apparent in univariate analysis. The ability to visualize complex relationships in a two-dimensional space facilitates interpretation and communication of results.</p>
+            <div class="fade-in">
+                <p>This project successfully demonstrated the power of Principal Component Analysis for reducing complex multidimensional climate data into interpretable components. The two-dimensional representation captured 93.9% of the variance while providing clear insights into European climate patterns.</p>
                 
-                <h3 style="margin-top: 2rem;">Practical Applications</h3>
-                <p>This methodology can be extended to other geographical and climate datasets, allowing comparisons between regions, identification of climate anomalies, and support for decision-making in urban planning, tourism, and climate change studies.</p>
+                <div class="results-grid" style="margin-top: 2rem;">
+                    <div class="result-card">
+                        <h4>Main Contributions</h4>
+                        <ul>
+                            <li>Successful dimensionality reduction from 16 to 2 components</li>
+                            <li>Clear interpretation of climate patterns across Europe</li>
+                            <li>Confirmation of established geographical climate theories</li>
+                            <li>Development of a dual-axis climate classification system</li>
+                        </ul>
+                    </div>
+                    <div class="result-card">
+                        <h4>Key Learnings</h4>
+                        <ul>
+                            <li>PCA is highly effective for geographical and climate data analysis</li>
+                            <li>Latitude dominates European temperature variations</li>
+                            <li>Continentality provides important secondary differentiation</li>
+                            <li>Visualization techniques are crucial for interpreting PCA results</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -723,10 +690,10 @@
                 <p>Feel free to contact me for professional opportunities or research projects.</p>
                 <div class="social-links">
                     <a href="https://github.com/jmalfaro2019" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="www.linkedin.com/in/jose-alfaro-334327291" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.linkedin.com/in/jose-alfaro-334327291" target="_blank"><i class="fab fa-linkedin"></i></a>
                     <a href="mailto:jose.alfaro@etu.imt-nord-europe.fr"><i class="fas fa-envelope"></i></a>
                 </div>
-                <p>&copy; 2025 Jose Alfaro. All rights reserved.</p>
+                <p>&copy; 2024 Jose Miguel Alfaro Castillo. All rights reserved.</p>
             </div>
         </div>
     </footer>
