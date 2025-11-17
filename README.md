@@ -130,7 +130,7 @@ The methodology can be extended to other geographical regions or additional clim
 
 Project completed as part of Unsupervised Learning coursework
 
-## 🔗 [View Project on GitHub Pages](https://jmalfaro2019.github.io/image_compressing-ml/)
+## 🔗 [View Project on GitHub Pages](https://jmalfaro2019.github.io/temperature-PCA/)
 
 📄  Full Report
 📋  [Download PDF Report](docs/temperature_analysis_europe.pdf)
